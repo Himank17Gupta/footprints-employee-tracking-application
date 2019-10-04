@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/footprints-employee-tracking-application/static/css/main.34de6062.chunk.css",
+    "main.js": "/footprints-employee-tracking-application/static/js/main.a6d575c8.chunk.js",
+    "main.js.map": "/footprints-employee-tracking-application/static/js/main.a6d575c8.chunk.js.map",
+    "runtime~main.js": "/footprints-employee-tracking-application/static/js/runtime~main.b5d107ae.js",
+    "runtime~main.js.map": "/footprints-employee-tracking-application/static/js/runtime~main.b5d107ae.js.map",
+    "static/css/2.35ed811c.chunk.css": "/footprints-employee-tracking-application/static/css/2.35ed811c.chunk.css",
+    "static/js/2.8a7808af.chunk.js": "/footprints-employee-tracking-application/static/js/2.8a7808af.chunk.js",
+    "static/js/2.8a7808af.chunk.js.map": "/footprints-employee-tracking-application/static/js/2.8a7808af.chunk.js.map",
+    "index.html": "/footprints-employee-tracking-application/index.html",
+    "precache-manifest.d65811c1c20887a83e206ed71837d2cc.js": "/footprints-employee-tracking-application/precache-manifest.d65811c1c20887a83e206ed71837d2cc.js",
+    "service-worker.js": "/footprints-employee-tracking-application/service-worker.js",
+    "static/css/2.35ed811c.chunk.css.map": "/footprints-employee-tracking-application/static/css/2.35ed811c.chunk.css.map",
+    "static/css/main.34de6062.chunk.css.map": "/footprints-employee-tracking-application/static/css/main.34de6062.chunk.css.map",
+    "static/media/mdb.css": "/footprints-employee-tracking-application/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/footprints-employee-tracking-application/static/media/fa-solid-900.d6d8d5da.woff2"
+  }
+}
