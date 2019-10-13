@@ -7,7 +7,7 @@ export default class Seetracks extends React.Component{
 
 constructor(props){
     super(props);
-    this.state={emplist:[]};
+    this.state={emplist:[],loader:true};
 }
 
 componentDidMount(){
@@ -19,7 +19,7 @@ componentDidMount(){
     emp.data.forEach(element => {
     elist.push(element);        
     });
-this.setState({emplist:elist});    
+this.setState({emplist:elist,loader:false});    
 }
     );
 }
@@ -29,6 +29,9 @@ render(){
     {/* <BrowserRouter> */}
          
          <h2> Choose Emplyoee to Check Route History</h2>
+         {this.state.loader?(<div className="spinner-border text-info" role="status">
+<span className="sr-only">Loading...</span>
+</div>):(<div></div>)}
          <ul>
          {
              this.state.emplist.map((emp)=>

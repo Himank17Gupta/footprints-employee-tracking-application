@@ -7,7 +7,7 @@ return(
    //left: signoutbutton
 
 <div>
-   <div style={{textAlign:'center', fontStyle: 'italic',fontSize: '40px'}}>dummy text--Welcome {userid}-- dummy text</div>
+   <div style={{textAlign:'center', fontStyle: 'italic',fontSize: '40px'}}>Welcome {userid} to FootPrints' Employee/User section :</div>
    <WrappedMap  
    userid={userid}
    googleMapURL={"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places,visualization"}

@@ -17,7 +17,7 @@ import Axios from 'axios';
 export default class ListEmployee extends React.Component{
 constructor(props){
     super(props);
-    this.state={emplist:[]};
+    this.state={emplist:[],loader:true};
 }
 
 componentDidMount(){
@@ -28,7 +28,7 @@ componentDidMount(){
     emp.data.forEach(element => {
     elist.push(element);        
     });
-this.setState({emplist:elist});    
+this.setState({emplist:elist,loader:false});    
 }
     );
 }
@@ -63,8 +63,11 @@ render(){
 
 return(
 <div>
-<h3> Registered Employees... </h3>
-    <ul>
+
+{this.state.loader?(<><h3> Loading Registered Employee List</h3><div className="spinner-border text-info" role="status">
+<span className="sr-only">Loading...</span>
+</div></>):(<h3>Perform Administrative Operations here..</h3>)}
+    {/* <ul>
     {
 this.state.emplist.map(obj=>{
 return(
@@ -77,7 +80,23 @@ return(
 )
 })
     }
-    </ul>
+    </ul> */}
+<tbody>
+{
+    this.state.emplist.map(obj=>{
+    return(
+    <tr key={obj}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td> {obj} </td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td><button  onClick={()=>this.edit(obj)} >edit info</button> </td>&nbsp;
+    <td><button  onClick={()=>this.remove(obj)} >remove employee</button> </td>&nbsp;
+    <td><button  onClick={()=>this.clear(obj)} >clear track history</button></td>&nbsp;
+    <td><button>send notification</button></td>
+    </tr>
+    )
+    })
+        }
+
+</tbody>
 </div>
 )
 }

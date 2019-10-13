@@ -2,6 +2,8 @@ import React, { useState } from'react';
 import io from 'socket.io-client';
 import {withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow ,Polyline} from 'react-google-maps';
 import Axios from 'axios';
+import Markimage from '../markerimage.png';
+import Mark1 from '../mark2.bmp';
 class Amap extends React.Component{
 
 constructor(props){
@@ -27,7 +29,12 @@ componentDidMount(){
 //this.state.sse.addEventListener('message',msg=>console.log('sse data :',msg));
 
 this.state.sse.onmessage=e=>{console.log('sse:',JSON.parse(e.data));this.ssearr=JSON.parse(e.data);this.setState({...this.state,markings:this.ssearr})}
-
+this.state.sse.onopen=e=>{console.log('sse opened',e)}
+this.state.sse.onerror=e=>{console.log('sse error',e)}
+}
+componentWillUnmount(){
+  console.log('component about to be unmounted');
+this.state.sse.close();
 }
 
 //idea is to dynamically recieve marking objects from server update em and re render the map with new marks
@@ -53,6 +60,8 @@ console.log('this.state.loc :',this.state.loc);
    >
     {markers.map(mark=>(
     <Marker
+    //icon={Markimage}
+    //icon={Mark1}
     position={mark}
     key={mark.lat}
     onClick={()=>this.setState({...this.state,loc:mark})}

@@ -7,6 +7,7 @@ class AdminLogin extends React.Component {
 constructor(props){
     super(props);
     this.obj={};
+    this.state={'loader':false};
 }
 
 takeInput(event){
@@ -19,14 +20,16 @@ handleSubmit(event) {
         console.log('handlesubmit called');
         event.preventDefault();
         console.log('empdata is : ',this.obj);
-
+        this.setState({'loader':true});
         console.log('axioslogincalled');
         Axios.post('https://realtimeloctracker.herokuapp.com/adminlogin',this.obj).then((res)=>{
            console.log(res);
            if(res.data==="Invalid Userid or Password"){
+            this.setState({'loader':false});
            document.getElementById('errmsg2').innerText='Incorrect UserId or Password..Try Again';
            } 
            else{
+            this.setState({'loader':false});
           this.props.history.push('/admindashboard');
 
           //this.props.history.push('/RealTimeLocations');
@@ -67,6 +70,10 @@ render(){
             />
              <label id='errmsg2' style={{color:'#ed8ea1',textAlign:"center",textAlignVertical: "center"}}></label>
             <div className="text-center mt-4">
+               {this.state.loader?(<div className="spinner-border text-info" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>):(<div></div>)}
+<br/>
               <MDBBtn color="indigo" type="submit">Go to Admin Dashboard</MDBBtn>
             </div>
           </form>

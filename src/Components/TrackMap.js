@@ -19,7 +19,7 @@ function AdminMap(props){
        defaultCenter={center}
   center={center}
   >
-    }
+    
 
 <Polyline
 

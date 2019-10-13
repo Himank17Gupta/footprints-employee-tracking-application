@@ -10,7 +10,9 @@ import EmpMap from "./Components/EmployeeMap";
 import AdminDashboard from "./Components/AdminDashboard";
 import AdminRTMap from "./Components/AdminRTMap";
 import Track from "./Components/Track";
-
+//deployed for github pages
+//deployed for github pages ----also check for git-remote....git remote repo made private so no one else could see it 
+//package.json has 3 added commands for gitHub pages implementations....homepage,predeploy,deploy
 function App3() {
   return  (
   <BrowserRouter>
@@ -19,7 +21,7 @@ function App3() {
   
     <MDBNav  color="special-color-dark" className="justify-content-end font-weight-bold py-2 px-2 mb-3">
     <MDBNavItem>
-        <h1 className="white-text" > &nbsp;Employee Tracker Application&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <h1 className="white-text" > FootPrints - Track Your Assets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       </MDBNavItem>
       <MDBNavItem>
         <MDBNavLink className="white-text" active to="/">About</MDBNavLink>
