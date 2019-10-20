@@ -44,7 +44,7 @@ render(){
       <br/>
       <MDBRow>
         <MDBCol md="12">
-          <form onSubmit={this.handleSubmit.bind(this)} >
+          <form style={{color:"white"}} onSubmit={this.handleSubmit.bind(this)} >
             <p className="h4 text-center mb-4">Sign in to your Administrative account</p>
             <label htmlFor="defaultFormLoginEmailEx" className="grey-text">
               Your email

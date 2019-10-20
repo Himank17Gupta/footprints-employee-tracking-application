@@ -27,12 +27,12 @@ else{
 
 const FormPage = () => {
   return (
-    <MDBContainer  className="container"   >
+    <MDBContainer  className="container"  style={{color:"white"}} >
       <MDBRow>
         <MDBCol md="12">
           <form>
             <p className="h5 text-center mb-4">Fill Employee information</p>
-            <div className="grey-text">
+            <div className="grey-text"  style={{color:"white"}}>
               <MDBInput
                 label="Employee UserId"
                 id='e-id'
@@ -42,6 +42,7 @@ const FormPage = () => {
                 validate
                 error="wrong"
                 success="right"
+                
               />
               <MDBInput
                 label="Employee email-id"

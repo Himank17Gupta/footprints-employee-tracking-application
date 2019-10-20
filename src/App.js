@@ -16,12 +16,12 @@ import Track from "./Components/Track";
 function App3() {
   return  (
   <BrowserRouter>
-  <MDBContainer>
+  <MDBContainer style={{fontFamily:'cursive'}} >
   {/* <Header/> */}
   
     <MDBNav  color="special-color-dark" className="justify-content-end font-weight-bold py-2 px-2 mb-3">
     <MDBNavItem>
-        <h1 className="white-text" > FootPrints - Track Your Assets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <h1 className="white-text" style={{fontFamily:'cursive'}} >FootPrints-Track Your Assets&nbsp;&nbsp;</h1>
       </MDBNavItem>
       <MDBNavItem>
         <MDBNavLink className="white-text" active to="/">About</MDBNavLink>
@@ -39,7 +39,7 @@ function App3() {
     </MDBNav>
 
 
-    <div className="container">
+    <div className="container" style={{fontFamily:'cursive'}}>
       <Route path="/" exact component={About} />
       <Route path="/employee" component={EmpLogin} />
       <Route path="/admin" component={AdminLogin} />

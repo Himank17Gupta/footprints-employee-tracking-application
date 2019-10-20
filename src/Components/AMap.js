@@ -50,6 +50,9 @@ console.log('this.state.loc :',this.state.loc);
     console.log('ssearr :',this.ssearr);
     console.log('ssea in state',this.state.ssea);
 
+    var image = "https://img.icons8.com/ios-filled/50/000000/standing-man.png";
+    var manimage="https://img.icons8.com/color/48/000000/standing-man.png";
+    
    var markers=this.state.markings;
    console.log('markers :',markers);
    return(  
@@ -62,8 +65,10 @@ console.log('this.state.loc :',this.state.loc);
     <Marker
     //icon={Markimage}
     //icon={Mark1}
+    icon={manimage}
     position={mark}
     key={mark.lat}
+    title={mark.userid}
     onClick={()=>this.setState({...this.state,loc:mark})}
     />
      ))} 

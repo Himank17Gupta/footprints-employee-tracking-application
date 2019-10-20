@@ -38,12 +38,12 @@ class  EmpLogin extends React.Component {
 
     render(){
   return (
-    <MDBContainer className="container" >
+    <MDBContainer className="container" style={{color:"white"}}>
      <br/>
       <MDBRow>
         <MDBCol md="12">
-          <form>
-            <p className="h5 text-center mb-4">Sign in</p>
+          <form color="white">
+            <p className="h5 text-center mb-4" style={{color:"white"}}>Sign in</p>
             <div className="grey-text">
               <MDBInput
                  
@@ -56,6 +56,7 @@ class  EmpLogin extends React.Component {
                 success="right"
                 onChange={this.takeInput.bind(this)}
                 name="userid"
+                color="white"
               />
               <MDBInput
                 label="Enter Reference Id given by your administrator"

@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import {MDBTable, MDBTableBody, MDBTableHead} from 'mdbreact';
 // export default function ListEmployee(){
 // return(
 // <>
@@ -23,7 +24,7 @@ constructor(props){
 componentDidMount(){
     console.log('component did mount called');
     console.log('b4axiosgetemployeelist');
-    Axios.post('https://realtimeloctracker.herokuapp.com/getemployeelist',{}).then(emp=>{
+    Axios.get('https://realtimeloctracker.herokuapp.com/getEmpDetails').then(emp=>{
         var elist=[];
     emp.data.forEach(element => {
     elist.push(element);        
@@ -40,7 +41,7 @@ console.log('edit ',obj);
 
 remove(obj){
 console.log('remove ',obj);
-Axios.post('https://realtimeloctracker.herokuapp.com/empdelete',{"userid":obj}).then(res=>{
+Axios.post('https://realtimeloctracker.herokuapp.com/empdelete',{"userid":obj.userid}).then(res=>{
     console.log(res.data);
     var arr= this.state.emplist;
     for(var i=0;i<arr.length;i++){
@@ -60,9 +61,9 @@ clear(obj){
 }
 
 render(){
-
+console.log('state:', this.state.emplist);
 return(
-<div>
+<div style={{color:"white"}}>
 
 {this.state.loader?(<><h3> Loading Registered Employee List</h3><div className="spinner-border text-info" role="status">
 <span className="sr-only">Loading...</span>
@@ -81,22 +82,41 @@ return(
 })
     }
     </ul> */}
-<tbody>
+{/*<tbody>
+    */}
+    <MDBTable striped style={{color:"white"}}>
+    <MDBTableHead color="special-color-dark" textWhite>
+        <tr>
+          <th>Name</th>
+          <th>Password</th>
+          <th>E-Mail</th>
+          <th>Contact</th>
+          <th>Edit</th>
+          <th>Remove</th>
+          <th>Clear</th>
+          <th>notification</th>
+        </tr>
+      </MDBTableHead>
+    <MDBTableBody>
 {
     this.state.emplist.map(obj=>{
     return(
-    <tr key={obj}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td> {obj} </td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td><button  onClick={()=>this.edit(obj)} >edit info</button> </td>&nbsp;
-    <td><button  onClick={()=>this.remove(obj)} >remove employee</button> </td>&nbsp;
-    <td><button  onClick={()=>this.clear(obj)} >clear track history</button></td>&nbsp;
-    <td><button>send notification</button></td>
+    <tr key={obj.userid}>
+    <td> {obj.userid} </td>
+    <td>{obj.password}</td>
+    <td>{obj.email}</td>
+    <td>{obj.phone}</td>
+    <td><button  onClick={()=>this.edit(obj)} >edit info</button> </td>
+    <td><button  onClick={()=>this.remove(obj)} >remove employee</button> </td>
+    <td><button  onClick={()=>this.clear(obj)} >clear track history</button></td>
+    <td><button>#notify</button></td>
     </tr>
     )
     })
         }
-
-</tbody>
+</MDBTableBody>
+{/* </tbody> */}
+</MDBTable>
 </div>
 )
 }

@@ -28,7 +28,7 @@ render(){
     return(<>
     {/* <BrowserRouter> */}
          
-         <h2> Choose Emplyoee to Check Route History</h2>
+         <h2 style={{color:"white"}}> Choose Emplyoee to Check Route History</h2>
          {this.state.loader?(<div className="spinner-border text-info" role="status">
 <span className="sr-only">Loading...</span>
 </div>):(<div></div>)}
