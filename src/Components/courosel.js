@@ -1,8 +1,5 @@
 import React from "react";
 import about1 from "../about1.png";
-import about2 from "../image (1).jpg";
-import about3 from "../image (5).jpg";
-//import about4 from "../image (2).png";
 import about4 from "../adminpic.jpg";
 import about6 from "../about3.jpg";
 import about10 from "../about10.png";
