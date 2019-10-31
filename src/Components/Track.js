@@ -23,7 +23,7 @@ render(){
    
     return(
     <div>
-        <h2>Showing last 24hr track record for Himank (ref id- 2002)</h2>
+        <h2>Showing last 24hr track record for {this.userid} (ref id- 2002)</h2>
         <button>refresh</button>
         <TMWrappedMap 
         us={this.userid}

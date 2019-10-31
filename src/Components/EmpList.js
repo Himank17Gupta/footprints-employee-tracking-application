@@ -58,6 +58,8 @@ console.log(err);
 
 clear(obj){
     console.log('clear coords called');
+    Axios.post('https://realtimeloctracker.herokuapp.com/clearCoords',{"userid":obj.userid}).then(res=>alert(res)).catch(err=>alert(err));
+
 }
 
 render(){
@@ -65,9 +67,9 @@ console.log('state:', this.state.emplist);
 return(
 <div style={{color:"white"}}>
 
-{this.state.loader?(<><h3> Loading Registered Employee List</h3><div className="spinner-border text-info" role="status">
+{this.state.loader?(<><h3> Loading Registered Employee List</h3><div style={{height:'250px'}}><div className="spinner-border text-info" role="status">
 <span className="sr-only">Loading...</span>
-</div></>):(<h3>Perform Administrative Operations here..</h3>)}
+</div></div></>):(<h3>Perform Administrative Operations here..</h3>)}
     {/* <ul>
     {
 this.state.emplist.map(obj=>{
@@ -91,7 +93,7 @@ return(
           <th>Password</th>
           <th>E-Mail</th>
           <th>Contact</th>
-          <th>Edit</th>
+          {/* <th>Edit</th> */}
           <th>Remove</th>
           <th>Clear</th>
           <th>notification</th>
@@ -106,7 +108,7 @@ return(
     <td>{obj.password}</td>
     <td>{obj.email}</td>
     <td>{obj.phone}</td>
-    <td><button  onClick={()=>this.edit(obj)} >edit info</button> </td>
+    {/* <td><button  onClick={()=>this.edit(obj)} >edit info</button> </td> */}
     <td><button  onClick={()=>this.remove(obj)} >remove employee</button> </td>
     <td><button  onClick={()=>this.clear(obj)} >clear track history</button></td>
     <td><button>#notify</button></td>

@@ -17,13 +17,13 @@ const FooterPage = () => {
             <h5 className="title">Quick Links</h5>
             <ul>
               <li className="list-unstyled">
-                <a href="#!">Link 1</a>
+                <a href="https://www.linkedin.com/in/himank-gupta-b37873192/">LinkedIn</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 2</a>
+                <a href="https://github.com/Himank17Gupta">Github</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 3</a>
+                <a href="https://twitter.com/HimanK17Gupta">Twitter</a>
               </li>
             </ul>
           </MDBCol>

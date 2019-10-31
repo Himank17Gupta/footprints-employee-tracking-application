@@ -31,7 +31,7 @@ const CarouselPage = () => {
            <MDBMask overlay="blue-grey-slight" /> 
           </MDBView>
           <MDBCarouselCaption>
-             <h2 className="h2-responsive" style={{fontFamily:'cursive',color:'black'}}>Some text... </h2> 
+             <h2 className="h2-responsive" style={{fontFamily:'cursive',color:'black'}}>... </h2> 
             {/* <p  style={{fontFamily:'cursive',color:'grey'}}>track the real time locations of the users, all of them at one place, at onceS on your device</p> */}
           </MDBCarouselCaption>
         </MDBCarouselItem>
@@ -46,7 +46,7 @@ const CarouselPage = () => {
           <MDBMask overlay="blue-grey-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h2 className="h2-responsive"  style={{fontFamily:'cursive',color:'black'}}>Some text...</h2>
+            <h2 className="h2-responsive"  style={{fontFamily:'cursive',color:'black'}}>...</h2>
             {/* <p  style={{fontFamily:'cursive',color:'grey'}}>Second text</p> */}
           </MDBCarouselCaption>
         </MDBCarouselItem>
@@ -61,7 +61,7 @@ const CarouselPage = () => {
           <MDBMask overlay="blue-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h2 className="h2-responsive"  style={{fontFamily:'cursive',color:'black'}}>Some text...</h2>
+            <h2 className="h2-responsive"  style={{fontFamily:'cursive',color:'black'}}>...</h2>
             {/* <p  style={{fontFamily:'cursive',color:'black'}}>Third text</p> */}
           </MDBCarouselCaption>
         </MDBCarouselItem>
@@ -76,7 +76,7 @@ const CarouselPage = () => {
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h2 className="h2-responsive"  style={{fontFamily:'cursive',color:'black'}}>Some text...</h2>
+            <h2 className="h2-responsive"  style={{fontFamily:'cursive',color:'black'}}>...</h2>
             {/* <p>Fourth text</p> */}
           </MDBCarouselCaption>
         </MDBCarouselItem>

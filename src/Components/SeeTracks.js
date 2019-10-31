@@ -32,7 +32,7 @@ render(){
          {this.state.loader?(<div className="spinner-border text-info" role="status">
 <span className="sr-only">Loading...</span>
 </div>):(<div></div>)}
-         <ul>
+         <ul style={{height:'250px'}}>
          {
              this.state.emplist.map((emp)=>
              <li>
