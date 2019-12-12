@@ -49,10 +49,6 @@ render(){
           </li>
           <li>
             <Link to={{
-             pathname:'/tracks',state:{dum:this.state.emplist[1]} }}>{this.state.emplist[1]}</Link>
-          </li>
-          <li>
-            <Link to={{
              pathname:'/tracks',state:{dum:this.state.emplist[2]} }}>{this.state.emplist[2]}</Link>
           </li>
         </ul> */}

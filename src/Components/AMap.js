@@ -14,7 +14,12 @@ this.state={
   loc:null,
   ssea:{},
 //this.markings=[{lat: 28.7041, lng: 77.1025},{lat: 29.7041, lng: 77.1025},{lat: 30.7041, lng: 77.1025}];
+
+// really important snippet //
+
 sse:new EventSource('https://realtimeloctracker.herokuapp.com/SSE'),
+
+
 //sse:new EventSource('http://localhost:2002/SSE',{withCredentials: true}),
 }
 }
@@ -63,8 +68,6 @@ console.log('this.state.loc :',this.state.loc);
    >
     {markers.map(mark=>(
     <Marker
-    //icon={Markimage}
-    //icon={Mark1}
     icon={manimage}
     position={mark}
     key={mark.lat}
